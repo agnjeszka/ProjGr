@@ -16,3 +16,6 @@ gen/
 local.properties
 
 .metadata/
+
+.classpath
+.project
