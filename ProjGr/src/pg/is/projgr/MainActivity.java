@@ -2,7 +2,10 @@ package pg.is.projgr;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 
@@ -10,6 +13,29 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        Button klik = (Button) findViewById(R.id.button1);
+        Button klik2 = (Button) findViewById(R.id.button3);
+        
+        klik2.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent startNewActivityOpen = new Intent(MainActivity.this, Raporty.class);
+				startActivityForResult(startNewActivityOpen, 0);
+			}
+		});
+        
+        klik.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent startNewActivityOpen = new Intent(MainActivity.this, Klikniecia.class);
+				startActivityForResult(startNewActivityOpen, 0);
+				//startActivity(new Intent("pg.is.projgr.KLIKNIECIA"));
+			}
+		});
+        
     }
 
     @Override

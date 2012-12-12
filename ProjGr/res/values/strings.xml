@@ -1,10 +1,53 @@
 <resources>
 
-    <string name="app_name">ProjGr</string>
+    <string name="app_name">Budżet Osobisty</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Budżet Osobisty</string>
+    <string name="title_wydatek">wydatek</string>
     <string name="test">&quot;Projekt Grupowy\nAgnieszka\nAleksandra\nJakub\nJustyna&quot;</string>
+    <string name="DodajWydatek">Dodaj Wydatek</string>
+    <string name="ZobaczRaport">Zobacz Raport</string>
+    <string name="Kategorie">Kategorie</string>
+    <string name="Ustawienia">Ustawienia</string>
+    
+    <string name="Nazwa">Dodaj wydatek:</string>
+    <string name="Nazwa1">Nazwa:</string>
+    <string name="Cena">Cena:</string>
+    <string name="Data">Data:</string>
+    <string name="Kategoria">Kategoria:</string>
+    
+    <string name="Kateg">Wybierz kategorię</string>
+    <string name="Kalendarz">Kalendarz</string>
+    <string name="Zatwierdz">Zatwierdź</string>
+    <string name="Kal">Kalendarz:</string>
+    <string name="OpR">Raporty:</string>
+     
+    <string name="kateg">wybierz kateg</string>
+    <string-array name="lista_kategorii">
+        <item>Jedzenie</item>
+        <item>Odzież</item>
+        <item>Usługi</item>
+        <item>Rachunki</item>
+    </string-array>
+    
+      <string name="listar">Raporty:</string>
+    <string-array name="lista_raportow">
+        <item>R1</item>
+        <item>R2</item>
+        <item>R3</item>
+        <item>R4</item>
+    </string-array>
+    
+    <string name="Raporty">Raport:</string>
+   
+     <string name="Plus">+</string>
+      <string name="TwojB">Twój budżet:</string>
+      <string name="Minus">-</string>
+       <string name="Rowne">=</string>
+       
+       <string name="Statystyki">Statystyki</string>
+       <string name="lista_kat">Kategoria:</string>
    
 
 </resources>

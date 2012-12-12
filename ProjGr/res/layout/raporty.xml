@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2" >
+
+	<TextView
+	    android:id="@+id/textViewOpr"
+	    style="@style/Tytul"
+	    android:text="@string/OpR"
+	    />
+
+	<TextView
+	    android:id="@+id/textViewr"
+	    style="@style/Napis"
+	    android:text="@string/Raporty"
+	    android:layout_alignTop="@+id/textViewOpr"
+	    android:layout_marginTop="50dp"
+	    android:layout_marginLeft="30dp"
+	    />
+
+	<TextView
+	    android:id="@+id/textViewPasekPl"
+	    style="@style/Napis"
+	    android:layout_width="250dp"
+	    android:layout_height="50dp"
+	    android:background="#c2c2c2"
+	    android:textSize="29sp"
+	    android:layout_alignLeft="@+id/textViewPlus"
+	    android:layout_alignTop="@+id/textViewTwojB"
+	    android:layout_marginTop="35dp"
+	    />
+
+	<TextView
+	    android:id="@+id/textViewPasekMin"
+	    style="@style/Napis"
+	    android:layout_width="250dp"
+	    android:layout_height="50dp"
+	    android:background="#c2c2c2"
+	    android:textSize="29sp"
+	    android:layout_alignTop="@+id/textViewPasekPl"
+	    android:layout_marginTop="63dp"
+	    android:layout_alignLeft="@+id/textViewMinus"
+	    android:layout_marginLeft="44dp"
+	    />
+	
+	<TextView
+	    android:id="@+id/textViewPasekRowne"
+	    style="@style/Napis"
+	    android:layout_width="250dp"
+	    android:layout_height="50dp"
+	    android:background="#c2c2c2"
+	    android:textSize="29sp"
+	    android:layout_alignTop="@+id/textViewPasekMin"
+	    android:layout_marginTop="63dp"
+	    android:layout_alignLeft="@+id/textViewRowne"
+	    android:layout_marginLeft="44dp"
+	    />
+
+	<Spinner
+	    android:id="@+id/raporty_spinner"
+	    style="@style/ListaWysuwana"
+	    android:entries="@array/lista_raportow"
+	    android:prompt="@string/listar"
+	    android:layout_alignTop="@+id/textViewOpr"
+	    android:layout_marginTop="50dp"
+	    android:layout_alignLeft="@+id/textViewr"
+	    android:layout_marginLeft="110dp"
+	    />
+
+	<TextView
+	    android:id="@+id/textViewTwojB"
+	    style="@style/Napis"
+	    android:text="@string/TwojB"
+	    android:layout_alignTop="@+id/textViewr"
+	    android:layout_marginTop="50dp"
+	    android:layout_marginLeft="30dp"
+	    />
+
+		<TextView
+	    android:id="@+id/textViewPlus"
+	    style="@style/Napisoperatory"
+	    android:text="@string/Plus"
+	    android:textSize="50dp"
+	    android:layout_alignTop="@+id/textViewTwojB"
+	    android:layout_marginTop="28dp"
+	    android:layout_marginLeft="10dp"
+	    />
+	
+	<TextView
+	    android:id="@+id/textViewMinus"
+	    style="@style/Napisoperatory"
+	    android:text="@string/Minus"
+	    android:textSize="80sp"
+	    android:layout_alignTop="@+id/textViewPlus"
+	    android:layout_marginTop="45dp"
+	    android:layout_marginLeft="6dp"
+	    />
+
+
+	<TextView
+	    android:id="@+id/textViewRowne"
+	    style="@style/Napisoperatory"
+	    android:text="@string/Rowne"
+	    android:textSize="60sp"
+	    android:layout_alignTop="@+id/textViewMinus"
+	    android:layout_marginTop="73dp"
+	    android:layout_marginLeft="6dp"
+	    />
+
+	<Button
+	    android:id="@+id/buttonStat"
+	    style="@style/Guzik"
+	    android:layout_centerHorizontal="true"
+	    android:text="@string/Statystyki"
+	    android:layout_alignTop="@+id/textViewPasekRowne"
+	    android:layout_marginTop="75dp"
+	    />
+	    
+</RelativeLayout>

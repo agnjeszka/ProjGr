@@ -20,6 +20,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Klikniecia"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="pg.is.projgr.KLIKNIECIA" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Raporty"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="pg.is.projgr.RAPORTY" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
