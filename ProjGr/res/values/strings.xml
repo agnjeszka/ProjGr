@@ -9,6 +9,7 @@
     <string name="DodajWydatek">Dodaj Wydatek</string>
     <string name="ZobaczRaport">Zobacz Raport</string>
     <string name="Kategorie">Kategorie</string>
+    <string name="Podkategoria">Podkategoria:</string>
     <string name="Ustawienia">Ustawienia</string>
     
     <string name="Nazwa">Dodaj wydatek:</string>
@@ -39,15 +40,28 @@
         <item>R4</item>
     </string-array>
     
+    <string-array name="adobe_products">
+        <item>Warzywa</item>
+        <item>Owoce</item>
+        <item>Pieczywo</item>
+        <item>Napoje</item>
+        <item>Fryzjer</item>
+        <item>Inne</item>
+        <item>Dodaj nową kategorię</item>
+    </string-array>
+    
     <string name="Raporty">Raport:</string>
    
      <string name="Plus">+</string>
+     <string name="L">L</string>
       <string name="TwojB">Twój budżet:</string>
       <string name="Minus">-</string>
        <string name="Rowne">=</string>
        
        <string name="Statystyki">Statystyki</string>
        <string name="lista_kat">Kategoria:</string>
+       <string name="kateg1">kategoria 1</string>
+       <string name="dodawaniepodkat">Dodaj podkategorię:</string>
    
 
 </resources>

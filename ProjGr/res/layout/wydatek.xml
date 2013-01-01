@@ -19,7 +19,16 @@
         style="@style/Napis"
         android:text="@string/lista_kat"
         android:layout_alignTop="@+id/textView4"
-        android:layout_marginTop="115dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginLeft="15dp"
+        />
+    
+    <TextView
+        android:id="@+id/textView12"
+        style="@style/Napis"
+        android:text="@string/Podkategoria"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_marginTop="155dp"
         android:layout_marginLeft="15dp"
         />
 
@@ -29,7 +38,7 @@
         android:entries="@array/lista_kategorii"
         android:prompt="@string/kateg"
         android:layout_alignTop="@+id/button2"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="100dp"
         android:layout_alignLeft="@+id/textView4"
         android:layout_marginLeft="70dp"
         />
@@ -41,6 +50,38 @@
         android:text="@string/Zatwierdz"
         android:layout_alignTop="@+id/kategorie_spinner"
         android:layout_marginTop="110dp"
+        />
+    
+    <Button
+        android:id="@+id/button4"
+        style="@style/Guzik"
+        android:text="@string/Plus"
+        android:layout_width="40dp"
+        android:layout_alignTop="@+id/kategorie_spinner"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="275dp"
+        />
+    
+    <Button
+        android:id="@+id/Lupka"
+        style="@style/Guzik"
+        android:text="@string/L"
+        android:layout_width="40dp"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_marginTop="37dp"
+        android:layout_marginLeft="280dp"
+        android:layout_height="40dp"
+        android:textSize="20dp"
+        />
+    
+    <TextView
+        android:id="@+id/Podkategoria"
+        style="@style/PasekSzary"
+        android:text=""
+        android:layout_alignTop="@+id/button2"
+        android:layout_marginTop="150dp"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_marginLeft="90dp"
         />
 
     <TextView

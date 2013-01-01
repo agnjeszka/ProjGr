@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2" >
+
+    <TextView
+        android:id="@+id/dodaj_podkat"
+	    style="@style/Napis"
+	    android:layout_centerHorizontal="true"
+	    android:text="@string/dodawaniepodkat"
+	    android:layout_marginTop="28dp">
+    </TextView>
+    
+  <EditText
+        android:id="@+id/editTextDodPodkat"
+        style="@style/Pasek"
+        android:layout_centerHorizontal="true"
+        android:layout_width="260dp"
+        android:layout_marginTop="70dp"
+        android:inputType="text"
+         />
+  <Button
+        android:id="@+id/button3"
+        style="@style/Guzik"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Zatwierdz"
+        android:layout_marginTop="120dp"
+        />
+
+</RelativeLayout>

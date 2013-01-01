@@ -38,6 +38,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AndroidListViewActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="pg.is.projgr.ANDROIDLISTVIEWACTIVITY" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Kalendarz"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="pg.is.projgr.KALENDARZ" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SingleListItem"
+                    android:label="Single Item Selected"></activity>
+        <activity
+            android:name=".DodajKategorie"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="pg.is.projgr.DODAJKATEGORIE" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
