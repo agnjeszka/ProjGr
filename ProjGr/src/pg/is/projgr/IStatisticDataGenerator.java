@@ -2,7 +2,7 @@ package pg.is.projgr;
 
 public interface IStatisticDataGenerator {
 
-	public float[] GetRaportsCount();
+	public int GetRaportsCount();
 	//numer ostatniego id raportu (nie jest to konieczna metoda, 
 	//ale kod bedzie jasniejszy, jak ja bede miala, zamiast uzywac dlugosci 
 	//ponizszych wektorow)
@@ -24,6 +24,9 @@ public interface IStatisticDataGenerator {
 	
 	public String[] GetMainCategories();
 	//wszystkie glowne kategorie (pewnie cztery czy piêæ)
+	
+	public String[] GetSubCategories(String category);
+	//wszystkie podkategorie danej kategorii
 	
 	public float[] GetIthMonthExpensesByCategories(int i);
 	//dlugosc tego wektora powinna byc taka sama jak tego z metody wyzej 

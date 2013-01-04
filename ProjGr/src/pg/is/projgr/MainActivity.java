@@ -1,8 +1,5 @@
 package pg.is.projgr;
 
-import org.achartengine.GraphicalView;
-import pg.is.projgr.graphs.BarGraph;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;

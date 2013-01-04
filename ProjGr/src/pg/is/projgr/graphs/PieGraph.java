@@ -1,5 +1,3 @@
-//TO REFACTOR
-
 package pg.is.projgr.graphs;
 
 import org.achartengine.ChartFactory;
@@ -7,26 +5,43 @@ import org.achartengine.GraphicalView;
 import org.achartengine.model.CategorySeries;
 import org.achartengine.renderer.DefaultRenderer;
 import org.achartengine.renderer.SimpleSeriesRenderer;
-
-import android.R.string;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 
 public class PieGraph {
-//	public Intent getIntent(Context context)
+
+	private float[] _expenses;
+	private String[] _categories;
+	private String _title;
+	
+	public PieGraph(float[] expenses, String[] categories, String title){
+		_expenses=expenses;
+		_categories=categories;
+		_title=title;
+	}
+	
 	public GraphicalView getView(Context context)
 	{
-		int[] values = {1,2,4,7,2,4};
-		String[] cathegories = {"Rachunki","Us³ugi","Jedzenie","Kosmetyki","Rozrywka","Inne"};
+		float[] values = _expenses;
+		String[] categories = _categories;
 		
 		CategorySeries series = new CategorySeries("Kategorie");
 		for (int i=0;i<values.length;i++)
 		{
-			series.add(cathegories[i],values[i]);
+			series.add(categories[i],values[i]);
 		}
 		 
-		int[] colors = new int[] {Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.RED,Color.YELLOW};
+		int[] colorsDictionary = new int[] {Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.RED,Color.YELLOW};
+		int[] colors = new int[_categories.length];
+		
+		for (int i=0;i<=colors.length;i++){
+			if ((colors.length % colorsDictionary.length==1) && (i==colors.length)) {
+				colors[i]=colorsDictionary[(i+1) % colorsDictionary.length];
+			}
+			else{
+				colors[i]=colorsDictionary[i%colorsDictionary.length];
+			}
+		}
 		
 		DefaultRenderer renderer = new DefaultRenderer();
 		for (int color: colors)
@@ -36,15 +51,12 @@ public class PieGraph {
 			renderer.addSeriesRenderer(r);
 		}
 		
-		renderer.setChartTitle("Podkategorie wydatków");
+		renderer.setChartTitle(_title);
 		renderer.setZoomButtonsVisible(true);
 		renderer.setZoomEnabled(true);
 		renderer.setBackgroundColor(Color.BLACK);
 		renderer.setApplyBackgroundColor(true);
 				
-		//Intent intent ChartFactory.getPieChartIntent(context, series, renderer,"Pie");
-		//return intent;
-		
 		return ChartFactory.getPieChartView(context, series, renderer);
 	}
 }

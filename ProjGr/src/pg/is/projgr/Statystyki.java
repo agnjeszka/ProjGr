@@ -2,70 +2,103 @@ package pg.is.projgr;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import pg.is.projgr.graphs.*;
 import org.achartengine.GraphicalView;
-
-import android.app.ActionBar;
 import android.app.Activity;
-import android.app.FragmentTransaction;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.NavUtils;
-import android.support.v4.view.ViewPager;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class Statystyki extends Activity  {
 
-	int statIndex;
-	List<GraphicalView> charts;
-	int chartsNumber;
+	private int _statIndex;
+	private int _chartsNumber;
+	public List<GraphicalView> Charts;
+	private LinearLayout _layout;
+	private Button _prev;
+	private Button _next;
+	private StatisticDataGenerator _stats;
+	
+	Context con = getApplicationContext();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.statystyki);
 		
-		Button prev = (Button) findViewById(R.id.statPrev);
-		prev.setEnabled(false);
+		_stats = new StatisticDataGenerator();
 		
-		Button next = (Button) findViewById(R.id.statNext);
-		next.setEnabled(true);
+		_prev = (Button) findViewById(R.id.statPrev);
+		_next = (Button) findViewById(R.id.statNext);
+
+		buttonsDisabler();
 		
-		charts = new ArrayList<GraphicalView>();
-		//load
+		Charts = new ArrayList<GraphicalView>();
 		
-		chartsNumber = charts.size();
-		//load first
+		Charts = loadCharts(Charts);
+		
+		_chartsNumber = Charts.size();
+		_layout = (LinearLayout)findViewById(R.id.chart);
+		
+		_layout.addView(Charts.get(_statIndex));
 	}
 	
-	//work in progress
 	public void statPrevHandle(View view){
-//		PieGraph pie = new PieGraph();
-//		GraphicalView gView = pie.getView(this);
-//		LinearLayout layout = (LinearLayout)findViewById(R.id.chart);
-//		layout.addView(gView);
+		_layout.removeAllViewsInLayout();
+		_statIndex--;
+		_layout.addView(Charts.get(_statIndex));
+		buttonsDisabler();
 	}
 	
 	public void statNextHandle(View view){
-//		PieGraph pie = new PieGraph();
-//		GraphicalView gView = pie.getView(this);
-//		LinearLayout layout = (LinearLayout)findViewById(R.id.chart);
-//		layout.addView(gView);
+		_layout.removeAllViewsInLayout();
+		_statIndex++;
+		_layout.addView(Charts.get(_statIndex));
+		buttonsDisabler();
 	}
 
+	public void buttonsDisabler(){
+		if (_statIndex==_chartsNumber){
+			_next.setEnabled(false);
+		}
+		else if (_statIndex==1){
+			_prev.setEnabled(false);
+		}
+		else{
+		_next.setEnabled(true);
+		_prev.setEnabled(false);
+		}
+	}
+	
+	public List<GraphicalView> loadCharts(List<GraphicalView> gViewList){
+		gViewList.add((new FilledLineGraph(_stats.GetExpensesMonthly(),"Wydatki miesiêczne")).getView(this));
+		gViewList.add((new FilledLineGraph(_stats.GetIncomeMonthly(),"Dochody miesiêczne")).getView(this));
+		gViewList.add((new FilledLineGraph(_stats.GetSavingsMonthly(),"Oszczêdnoœci miesiêczne")).getView(this));
 
+		gViewList.add((new TwoLineGraph(_stats.GetExpensesMonthly(),_stats.GetIncomeMonthly(),"Wydatki i dochody miesiêczne")).getView(this));
+		
+		String[] _titles = {"Wydatki z tego miesi¹ca","Wydatki z poprzedniego miesi¹ca","Wydatki sprzed dwóch miesiêcy"};
+		for (int i=0;i<3;i++){
+			if (_stats.GetRaportsCount()-i>0){
+				gViewList.add((new BarGraph(_stats.GetIthMonthExpenses(i),_titles[i])).getView(this));
+			}
+		}
+		
+		String[] _titles2 = {"Kategorie wydatków w tym miesi¹cu","Kategorie wydatków w poprzednim miesi¹cu","Kategorie wydatków sprzed 2 miesiêcy"};
+		for (int i=0;i<3;i++){
+			if (_stats.GetRaportsCount()-i>0){
+				gViewList.add((new PieGraph(_stats.GetIthMonthExpensesByCategories(i),_stats.GetMainCategories(),_titles2[i])).getView(this));
+			}
+		}
+		
+		for (String category : _stats.GetMainCategories()){
+			String[] _titles3 = {"Podkategorie wydatków z kategorii "+ category+" z tego miesi¹ca","Podkategorie wydatków z kategorii "+ category+" z poprzedniego miesi¹ca","Podkategorie wydatków z kategorii "+ category+" sprzed dwóch miesiêcy"};
+			for (int i=0;i<3;i++){
+				gViewList.add((new PieGraph(_stats.GetIthMonthExpensesBySubcategories(i, category),_stats.GetSubCategories(category),_titles3[i])).getView(this));
+			}
+		}
+		return gViewList;
+	}
 }

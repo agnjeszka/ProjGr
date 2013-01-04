@@ -4,26 +4,33 @@
     android:layout_height="match_parent"
     android:background="#000000" >
    <Button
-        android:id="@+id/statNext"
+        android:id="@+id/statPrev"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="52dp"
-        android:text="@string/statButtonNext"
-        android:textColor="#fbfbfb"
-        android:textSize="25dp" 
-        android:onClick="statNextHandle"/>
-
-    <Button
-        android:id="@+id/statPrev"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:text="@string/statButtonPrev"
         android:textColor="#fbfbfb"
         android:textSize="25dp" 
         android:onClick="statPrevHandle"/>
+
+    <Button
+        android:id="@+id/statNext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/statButtonNext"
+        android:textColor="#fbfbfb"
+        android:textSize="25dp" 
+        android:onClick="statNextHandle"/>
+    
+    <LinearLayout
+        android:id="@+id/chart"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/statNext"
+        android:layout_below="@+id/statPrev"
+        android:orientation="vertical" />
 
 </RelativeLayout>
