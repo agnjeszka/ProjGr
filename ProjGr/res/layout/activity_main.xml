@@ -31,7 +31,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/button3"
         android:layout_marginTop="41dp"
-        android:text="@string/Kategorie"
+        android:text="@string/Statystyki"
         android:textColor="#fbfbfb"
         android:textSize="25dp" />
 

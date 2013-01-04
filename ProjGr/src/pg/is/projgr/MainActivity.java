@@ -1,5 +1,8 @@
 package pg.is.projgr;
 
+import org.achartengine.GraphicalView;
+import pg.is.projgr.graphs.BarGraph;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -16,6 +19,7 @@ public class MainActivity extends Activity {
         
         Button klik = (Button) findViewById(R.id.button1);
         Button klik2 = (Button) findViewById(R.id.button3);
+        Button klik3 = (Button) findViewById(R.id.button2);
         
         klik2.setOnClickListener(new View.OnClickListener() {
 			
@@ -36,7 +40,15 @@ public class MainActivity extends Activity {
 			}
 		});
         
-        
+        klik3.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent startNewActivityOpen = new Intent(MainActivity.this, Statystyki.class);
+				startActivityForResult(startNewActivityOpen, 0);
+				//startActivity(new Intent("pg.is.projgr.KLIKNIECIA"));
+			}
+		});
     }
 
     @Override
@@ -44,4 +56,5 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
+    
 }
