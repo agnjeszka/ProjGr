@@ -2,48 +2,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background2" >
-
+    android:background="@drawable/texture" >
+
     <Button
         android:id="@+id/button1"
-        android:layout_width="fill_parent"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/myshape"
+        android:focusableInTouchMode="true"
         android:text="@string/DodajWydatek"
         android:textColor="#fbfbfb"
-        android:textSize="27dp"
-        />
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="fill_parent"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
         android:layout_below="@+id/button1"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/myshape"
         android:text="@string/ZobaczRaport"
         android:textColor="#fbfbfb"
-        android:textSize="25dp" />
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="fill_parent"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
         android:layout_below="@+id/button3"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/myshape"
         android:text="@string/Statystyki"
         android:textColor="#fbfbfb"
-        android:textSize="25dp" />
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="fill_parent"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="52dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/myshape"
         android:text="@string/Ustawienia"
         android:textColor="#fbfbfb"
-        android:textSize="25dp" />
+        android:textSize="20dp" />
 
 </RelativeLayout>

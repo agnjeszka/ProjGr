@@ -2,11 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background2" >
+    android:background="@drawable/texture" >
 
     <TextView
         android:id="@+id/dodaj_podkat"
-	    style="@style/Napis"
+	    style="@style/Tytul"
 	    android:layout_centerHorizontal="true"
 	    android:text="@string/dodawaniepodkat"
 	    android:layout_marginTop="28dp">

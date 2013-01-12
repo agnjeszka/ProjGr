@@ -2,16 +2,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background2" >
+    android:background="@drawable/texture" >
 
     <Button
         android:id="@+id/button2"
         style="@style/Guzik"
         android:text="@string/Kalendarz"
         android:layout_alignTop="@+id/editText2"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="44dp"
         android:layout_alignLeft="@+id/textView4"
-        android:layout_marginLeft="77dp"
+        android:layout_marginLeft="75dp"
         />
 
     <TextView
@@ -19,8 +19,8 @@
         style="@style/Napis"
         android:text="@string/lista_kat"
         android:layout_alignTop="@+id/textView4"
-        android:layout_marginTop="105dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="43dp"
         />
     
     <TextView
@@ -28,7 +28,7 @@
         style="@style/Napis"
         android:text="@string/Podkategoria"
         android:layout_alignTop="@+id/textView4"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="135dp"
         android:layout_marginLeft="15dp"
         />
 
@@ -38,9 +38,9 @@
         android:entries="@array/lista_kategorii"
         android:prompt="@string/kateg"
         android:layout_alignTop="@+id/button2"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="85dp"
         android:layout_alignLeft="@+id/textView4"
-        android:layout_marginLeft="70dp"
+        android:layout_marginLeft="80dp"
         />
 
     <Button
@@ -49,7 +49,7 @@
         android:layout_centerHorizontal="true"
         android:text="@string/Zatwierdz"
         android:layout_alignTop="@+id/kategorie_spinner"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="135dp"
         />
     
     <Button
@@ -58,8 +58,8 @@
         android:text="@string/Plus"
         android:layout_width="40dp"
         android:layout_alignTop="@+id/kategorie_spinner"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="275dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginLeft="270dp"
         />
     
     <Button
@@ -68,8 +68,8 @@
         android:text="@string/L"
         android:layout_width="40dp"
         android:layout_alignTop="@+id/textView2"
-        android:layout_marginTop="37dp"
-        android:layout_marginLeft="280dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="270dp"
         android:layout_height="40dp"
         android:textSize="20dp"
         />
@@ -79,9 +79,9 @@
         style="@style/PasekSzary"
         android:text=""
         android:layout_alignTop="@+id/button2"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="138dp"
         android:layout_alignLeft="@+id/textView4"
-        android:layout_marginLeft="90dp"
+        android:layout_marginLeft="80dp"
         />
 
     <TextView
@@ -89,7 +89,7 @@
         style="@style/Napis"
         android:layout_alignRight="@+id/textView3"
         android:layout_alignTop="@+id/textView3"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:text="@string/Data" />
 
 
@@ -109,13 +109,13 @@
         style="@style/Napis"
         android:layout_alignRight="@+id/textView1"
         android:layout_alignTop="@+id/textView1"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="45dp"
         android:text="@string/Cena" />
 
     <EditText
         android:id="@+id/editText1"
         style="@style/Pasek"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="45dp"
         android:layout_alignLeft="@+id/textView4"
         android:layout_marginLeft="80dp"
         android:inputType="text"

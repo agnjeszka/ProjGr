@@ -5,6 +5,10 @@ import android.os.Bundle;
 
 public class Raporty extends Activity{
 
+	public static String budzetplus;
+	public static String budzetminus;
+	public static String budzetrownasie;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
