@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import pg.is.projgr.actions.StatisticDataGenerator;
 
 public class Statystyki extends Activity  {
 
@@ -28,7 +29,7 @@ public class Statystyki extends Activity  {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.statystyki);
 		
-		_stats = new StatisticDataGenerator();
+		_stats = StatisticDataGenerator.getInstance();
 		
 		_prev = (Button) findViewById(R.id.statPrev);
 		_next = (Button) findViewById(R.id.statNext);

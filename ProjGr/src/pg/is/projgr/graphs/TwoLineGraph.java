@@ -8,7 +8,7 @@ import org.achartengine.model.XYMultipleSeriesDataset;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
 
-import pg.is.projgr.StatisticDataGenerator;
+import pg.is.projgr.actions.StatisticDataGenerator;
 
 import android.content.Context;
 import android.graphics.Color;

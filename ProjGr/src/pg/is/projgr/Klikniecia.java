@@ -1,5 +1,7 @@
 package pg.is.projgr;
 
+import java.sql.SQLException;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,10 +25,20 @@ public class Klikniecia extends Activity{
 		TextView txtProduct = (TextView) findViewById(R.id.Podkategoria);
 		 
         Intent i = getIntent();
-        // getting attached intent data
-        String product = i.getStringExtra("product");
+        String product;
+		try {
+			product = i.getStringExtra(MainActivity.dbHelper.selectWydatki().get(0).getNazwa());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         // displaying selected product name
-        txtProduct.setText(product);
+        try {
+			txtProduct.setText(MainActivity.dbHelper.selectWydatki().get(0).getNazwa());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         
         EditText txtProduct2 = (EditText) findViewById(R.id.editText1);
         txtProduct2.setText(nazwa1);
