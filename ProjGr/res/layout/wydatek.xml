@@ -65,7 +65,7 @@
     <Button
         android:id="@+id/Lupka"
         style="@style/Guzik"
-        android:text="@string/L"
+        android:background="@drawable/ic_action_search"
         android:layout_width="40dp"
         android:layout_alignTop="@+id/textView2"
         android:layout_marginTop="32dp"

@@ -78,6 +78,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".DateTimeDemo1"
+            android:label="@string/title_activity_stat" >
+            <intent-filter>
+                <action android:name="pg.is.projgr.DATETIMEDEMO1" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         
         android:icon="@drawable/ramkablack"
         android:label="@string/app_name" >

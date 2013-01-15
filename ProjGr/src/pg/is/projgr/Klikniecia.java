@@ -1,11 +1,16 @@
 package pg.is.projgr;
 
+import java.text.DateFormat;
+import java.util.Calendar;
+
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -14,11 +19,34 @@ public class Klikniecia extends Activity{
 	public static String nazwa1;
 	public static String nazwa2;
 	public static int pozycja;
+	public static String nazwa3="Ustaw date";
+	
+	DateFormat fmtDateAndTime = DateFormat.getDateTimeInstance();
+	TextView lblDateAndTime;
+	Calendar myCalendar = Calendar.getInstance();
+
+	DatePickerDialog.OnDateSetListener d = new DatePickerDialog.OnDateSetListener() {
+	public void onDateSet(DatePicker view, int year, int monthOfYear,
+			int dayOfMonth) {
+	myCalendar.set(Calendar.YEAR, year);
+	myCalendar.set(Calendar.MONTH, monthOfYear);
+	myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+	
+	updateLabel();
+	
+	}
+	};
+
+	private void updateLabel() {
+		lblDateAndTime.setText(fmtDateAndTime.format(myCalendar.getTime()));
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.wydatek);
+		
 		
 		TextView txtProduct = (TextView) findViewById(R.id.Podkategoria);
 		 
@@ -51,6 +79,9 @@ public class Klikniecia extends Activity{
 				Spinner txtProduct4 = (Spinner) findViewById(R.id.kategorie_spinner);
 				pozycja = txtProduct4.getSelectedItemPosition();
 				
+				TextView lblDateAndTime = (TextView) findViewById(R.id.button2);
+				nazwa3 = lblDateAndTime.getText().toString();
+				
 				Intent startNewActivityOpen = new Intent(Klikniecia.this, AndroidListViewActivity.class);
 				startActivityForResult(startNewActivityOpen, 0);
 			}
@@ -59,11 +90,29 @@ public class Klikniecia extends Activity{
 			
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent startNewActivityOpen = new Intent(Klikniecia.this, Kalendarz.class);
+				Intent startNewActivityOpen = new Intent(Klikniecia.this, DateTimeDemo1.class);
 				startActivityForResult(startNewActivityOpen, 0);
 			}
 		});
 		
+
+		lblDateAndTime = (TextView) findViewById(R.id.button2);
+		Button btnDate = (Button) findViewById(R.id.button2);
+		btnDate.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				new DatePickerDialog(Klikniecia.this, d, myCalendar
+						.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+						myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+				
+			}
+		});
+
+		updateLabel();
+
+		
+		Button txtProduct5 = (Button) findViewById(R.id.button2);
+        txtProduct5.setText(nazwa3);
+        
 	}
 	
 	
