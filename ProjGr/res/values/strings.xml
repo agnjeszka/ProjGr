@@ -65,5 +65,6 @@
        <string name="statButtonNext">Następny</string>
        <string name="title_activity_stat">Statystyki</string>
    
-
+       <string name="aktualizuj">Aktualizuj</string>
+       <string name="twojbudzet">Twój budżet:</string>
 </resources>

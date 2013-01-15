@@ -8,15 +8,15 @@
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_marginTop">12dp</item>
-        <item name="android:textSize">23dp</item>
+        <item name="android:textSize">20dp</item>
     </style>
     
      <style name="Napis" parent="@android:style/TextAppearance">
         <item name="android:textColor">#FFF</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">40dp</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:textSize">17dp</item>
      </style>
      
      <style name="Napisoperatory" parent="@android:style/TextAppearance">
@@ -26,7 +26,7 @@
      </style>
     
      <style name="Pasek" parent="@android:style/Widget.EditText">
-        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_width">120dp</item>
         <item name="android:layout_height">33dp</item>
         <item name="android:background">#FFF</item>
         <item name="android:textSize">23dp</item>
@@ -37,13 +37,13 @@
      </style>
     
      <style name="Guzik" parent="@android:style/Widget.Button">
-        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_width">129dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">22dp</item>
+        <item name="android:textSize">17dp</item>
      </style>
      
      <style name="ListaWysuwana" parent="@android:style/Widget.Button">
-        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_width">120dp</item>
         <item name="android:layout_height">40dp</item>
         <item name="android:background">#979797</item>
      </style>
@@ -52,6 +52,21 @@
         <item name="android:layout_width">120dp</item>
         <item name="android:layout_height">40dp</item>
         <item name="android:background">#979797</item>
+     </style>
+     
+     <style name="WidgetNapisy" parent="@android:style/TextAppearance">
+     	<item name="android:textColor">#FFF</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+     </style>
+     
+     
+     <style name="PasekSzaryW" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#FFF</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:textSize">11dp</item>
      </style>
      
     

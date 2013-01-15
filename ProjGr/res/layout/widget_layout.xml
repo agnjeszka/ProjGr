@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="145dp"
+    android:layout_height="130dp"
+    android:layout_margin="8dip"
+    android:background="@drawable/widgetshape" >
+    
+    <TextView 
+        android:id="@+id/napisbudzet"
+        style="@style/WidgetNapisy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="6dp"
+        android:text="@string/twojbudzet" 
+        android:textSize="11dp">
+        </TextView>
+        
+    <TextView
+	    android:id="@+id/PasekPlusW"
+	    style="@style/PasekSzaryW"
+	    android:layout_width="100dp"
+	    android:layout_height="20dp"
+	    android:background="#c2c2c2"
+	    android:textSize="11dp"
+	    android:layout_marginTop="49dp"
+	    android:layout_marginLeft="32dp"
+	    />
+    
+    <TextView
+	    android:id="@+id/PasekMinusW"
+	    style="@style/PasekSzaryW"
+	    android:layout_width="100dp"
+	    android:layout_height="20dp"
+	    android:background="#c2c2c2"
+	    android:textSize="11dp"
+	    android:layout_marginTop="25dp"
+	    android:layout_marginLeft="32dp"
+	    />
+    
+    <TextView
+	    android:id="@+id/PasekRowneW"
+	    style="@style/PasekSzaryW"
+	    android:layout_width="100dp"
+	    android:layout_height="20dp"
+	    android:background="#c2c2c2"
+	    android:textSize="11dp"
+	    android:layout_marginTop="73dp"
+	    android:layout_marginLeft="32dp"
+	    />
+    
+    <TextView
+	    android:id="@+id/textViewPlusW"
+	    style="@style/Napisoperatory"
+	    android:text="@string/Plus"
+	    android:textSize="18dp"
+	    android:layout_marginTop="21dp"
+	    android:layout_marginLeft="12dp"
+	    />
+    
+    <TextView
+	    android:id="@+id/textViewMinusW"
+	    style="@style/Napisoperatory"
+	    android:text="@string/Minus"
+	    android:textSize="27dp"
+	    android:layout_marginTop="37dp"
+	    android:layout_marginLeft="11dp"
+	    />
+    
+    <TextView
+	    android:id="@+id/textViewRowneW"
+	    style="@style/Napisoperatory"
+	    android:text="@string/Rowne"
+	    android:textSize="21dp"
+	    android:layout_marginTop="66dp"
+	    android:layout_marginLeft="11dp"
+	    />
+
+    <TextView
+        android:id="@+id/update"
+        style="@style/Guzik"
+        android:layout_width="78dp"
+        android:layout_height="31dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/aktualizuj"
+        android:textSize="10dp" />
+    
+  <ImageButton
+        android:id="@+id/guzikikonaap"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+	    android:layout_marginLeft="7dp"
+        android:src="@drawable/ic_launchers" />
+
+</RelativeLayout> 

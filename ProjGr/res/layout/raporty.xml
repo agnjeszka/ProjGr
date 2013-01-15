@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background2" >
+    android:background="@drawable/texture" >
 
 	<TextView
 	    android:id="@+id/textViewOpr"
@@ -16,45 +16,46 @@
 	    android:text="@string/Raporty"
 	    android:layout_alignTop="@+id/textViewOpr"
 	    android:layout_marginTop="50dp"
-	    android:layout_marginLeft="30dp"
+	    android:layout_marginLeft="74dp"
 	    />
 
 	<TextView
 	    android:id="@+id/textViewPasekPl"
 	    style="@style/Napis"
-	    android:layout_width="250dp"
-	    android:layout_height="50dp"
+	    android:layout_width="210dp"
+	    android:layout_height="40dp"
 	    android:background="#c2c2c2"
 	    android:textSize="29sp"
 	    android:layout_alignLeft="@+id/textViewPlus"
 	    android:layout_alignTop="@+id/textViewTwojB"
 	    android:layout_marginTop="35dp"
+	    android:layout_marginLeft="43dp"
 	    />
 
 	<TextView
 	    android:id="@+id/textViewPasekMin"
 	    style="@style/Napis"
-	    android:layout_width="250dp"
-	    android:layout_height="50dp"
+	    android:layout_width="210dp"
+	    android:layout_height="40dp"
 	    android:background="#c2c2c2"
 	    android:textSize="29sp"
 	    android:layout_alignTop="@+id/textViewPasekPl"
-	    android:layout_marginTop="63dp"
+	    android:layout_marginTop="53dp"
 	    android:layout_alignLeft="@+id/textViewMinus"
-	    android:layout_marginLeft="44dp"
+	    android:layout_marginLeft="43dp"
 	    />
 	
 	<TextView
 	    android:id="@+id/textViewPasekRowne"
 	    style="@style/Napis"
-	    android:layout_width="250dp"
-	    android:layout_height="50dp"
+	    android:layout_width="210dp"
+	    android:layout_height="40dp"
 	    android:background="#c2c2c2"
 	    android:textSize="29sp"
 	    android:layout_alignTop="@+id/textViewPasekMin"
-	    android:layout_marginTop="63dp"
+	    android:layout_marginTop="53dp"
 	    android:layout_alignLeft="@+id/textViewRowne"
-	    android:layout_marginLeft="44dp"
+	    android:layout_marginLeft="43dp"
 	    />
 
 	<Spinner
@@ -63,9 +64,9 @@
 	    android:entries="@array/lista_raportow"
 	    android:prompt="@string/listar"
 	    android:layout_alignTop="@+id/textViewOpr"
-	    android:layout_marginTop="50dp"
+	    android:layout_marginTop="42dp"
 	    android:layout_alignLeft="@+id/textViewr"
-	    android:layout_marginLeft="110dp"
+	    android:layout_marginLeft="90dp"
 	    />
 
 	<TextView
@@ -81,20 +82,20 @@
 	    android:id="@+id/textViewPlus"
 	    style="@style/Napisoperatory"
 	    android:text="@string/Plus"
-	    android:textSize="50dp"
+	    android:textSize="30dp"
 	    android:layout_alignTop="@+id/textViewTwojB"
-	    android:layout_marginTop="28dp"
-	    android:layout_marginLeft="10dp"
+	    android:layout_marginTop="37dp"
+	    android:layout_marginLeft="30dp"
 	    />
 	
 	<TextView
 	    android:id="@+id/textViewMinus"
 	    style="@style/Napisoperatory"
 	    android:text="@string/Minus"
-	    android:textSize="80sp"
+	    android:textSize="40dp"
 	    android:layout_alignTop="@+id/textViewPlus"
-	    android:layout_marginTop="45dp"
-	    android:layout_marginLeft="6dp"
+	    android:layout_marginTop="46dp"
+	    android:layout_marginLeft="30dp"
 	    />
 
 
@@ -102,10 +103,10 @@
 	    android:id="@+id/textViewRowne"
 	    style="@style/Napisoperatory"
 	    android:text="@string/Rowne"
-	    android:textSize="60sp"
+	    android:textSize="33dp"
 	    android:layout_alignTop="@+id/textViewMinus"
-	    android:layout_marginTop="73dp"
-	    android:layout_marginLeft="6dp"
+	    android:layout_marginTop="58dp"
+	    android:layout_marginLeft="30dp"
 	    />
 
 	<Button
@@ -114,7 +115,7 @@
 	    android:layout_centerHorizontal="true"
 	    android:text="@string/Statystyki"
 	    android:layout_alignTop="@+id/textViewPasekRowne"
-	    android:layout_marginTop="75dp"
+	    android:layout_marginTop="90dp"
 	    />
 	    
 </RelativeLayout>
