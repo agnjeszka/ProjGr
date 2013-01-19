@@ -31,11 +31,11 @@ public class PieGraph {
 			series.add(categories[i],values[i]);
 		}
 		 
-		int[] colorsDictionary = new int[] {Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.RED,Color.YELLOW};
+		int[] colorsDictionary = new int[] {Color.rgb(33, 99, 204),Color.rgb(33, 66, 99),Color.rgb(0, 99, 66),Color.rgb(0, 66, 33)};
 		int[] colors = new int[_categories.length];
 		
-		for (int i=0;i<=colors.length;i++){
-			if ((colors.length % colorsDictionary.length==1) && (i==colors.length)) {
+		for (int i=0;i<colors.length;i++){
+			if ((colors.length % colorsDictionary.length==1) && (i==(colors.length-1))) {
 				colors[i]=colorsDictionary[(i+1) % colorsDictionary.length];
 			}
 			else{
@@ -52,7 +52,7 @@ public class PieGraph {
 		}
 		
 		renderer.setChartTitle(_title);
-		renderer.setZoomButtonsVisible(true);
+		renderer.setZoomButtonsVisible(false);
 		renderer.setZoomEnabled(true);
 		renderer.setBackgroundColor(Color.BLACK);
 		renderer.setApplyBackgroundColor(true);

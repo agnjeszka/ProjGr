@@ -38,7 +38,7 @@ public class BarGraph {
 		XYSeriesRenderer renderer = new XYSeriesRenderer();
 		renderer.setDisplayChartValues(true);
 		renderer.setChartValuesSpacing((float)0.45);
-		renderer.setColor(Color.rgb(51, 204, 204));
+		renderer.setColor(Color.rgb(33, 99, 99));
 				
 		XYMultipleSeriesRenderer mrenderer = new XYMultipleSeriesRenderer();
 		mrenderer.addSeriesRenderer(renderer);
@@ -50,7 +50,7 @@ public class BarGraph {
 		mrenderer.setBarSpacing((float)1);
 		mrenderer.setGridColor(Color.DKGRAY);
 		mrenderer.setShowGrid(true);
-		mrenderer.setZoomButtonsVisible(true);
+		mrenderer.setZoomButtonsVisible(false);
 		mrenderer.setZoomEnabled(true);
 		mrenderer.setYAxisMin(0);
 		mrenderer.setYAxisMax(StatisticDataGenerator.GetMax(_expenses));

@@ -57,13 +57,13 @@ public class TwoLineGraph {
 		renderer.setFillPoints(true);
 		renderer.setPointStyle(PointStyle.POINT);
 		renderer.setLineWidth(5);
-		renderer.setColor(Color.rgb(51, 51, 102));
+		renderer.setColor(Color.rgb(33, 99, 99));
 		
 		XYSeriesRenderer renderer2 = new XYSeriesRenderer();
 		renderer2.setFillPoints(true);
 		renderer2.setPointStyle(PointStyle.POINT);
 		renderer2.setLineWidth(5);
-		renderer2.setColor(Color.rgb(51, 204, 153));
+		renderer2.setColor(Color.rgb(33, 99, 33));
 		
 		//for grouping series into multiple renderer
 		XYMultipleSeriesRenderer mrenderer = new XYMultipleSeriesRenderer();
@@ -74,12 +74,12 @@ public class TwoLineGraph {
 		mrenderer.setChartTitle(_title);
 		mrenderer.setGridColor(Color.DKGRAY);
 		mrenderer.setShowGrid(true);
-		mrenderer.setZoomButtonsVisible(true);
+		mrenderer.setZoomButtonsVisible(false);
 		mrenderer.setZoomEnabled(true);
 		mrenderer.setYTitle("Kwota");
 		mrenderer.setXTitle("Miesi¹ce");
 		mrenderer.setYAxisMin(0);
-		mrenderer.setYAxisMax(1.25*_max);
+		mrenderer.setYAxisMax(_max+100);
 		
 		return ChartFactory.getLineChartView(context, dataset, mrenderer);
 	}
