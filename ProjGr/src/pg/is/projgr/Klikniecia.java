@@ -149,8 +149,7 @@ public class Klikniecia extends Activity {
 				cal.setTime(date);
 				int month = cal.get(Calendar.MONTH);
 				Log.d("date",""+ month);
-				List<Raport> raporty = MainActivity.dataGenerator
-						.getRaportByMonth(month);
+				List<Raport> raporty = MainActivity.dataGenerator.getRaportByMonth(month);
 				if (raporty.size() == 0) {
 					float number = Float.valueOf(txtProduct3.getText()
 							.toString());
@@ -192,8 +191,7 @@ public class Klikniecia extends Activity {
 
 	public void KategoryzujProdukt(String nazwa) {
 		try {
-			Podkategoria p = MainActivity.dataGenerator
-					.kategoryzujProduktPoNazwie(nazwa.toLowerCase());
+			Podkategoria p = MainActivity.dataGenerator.kategoryzujProduktPoNazwie(nazwa.toLowerCase());
 
 			if (p == null) {
 				alertDialog = new AlertDialog.Builder(this).create();

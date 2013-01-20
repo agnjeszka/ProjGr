@@ -28,16 +28,11 @@ public class Statystyki extends Activity  {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.statystyki);
-<<<<<<< HEAD
 		
 		_stats = StatisticDataGenerator.getInstance();
-		
-=======
+
 		con = getApplicationContext();
 
-		_stats = new StatisticDataGenerator();
-
->>>>>>> adc17c42dc49abe6d0d6e79e757442e4ea0e2c95
 		_prev = (Button) findViewById(R.id.statPrev);
 		_next = (Button) findViewById(R.id.statNext);
 
