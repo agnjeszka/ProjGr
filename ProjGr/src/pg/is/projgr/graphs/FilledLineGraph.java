@@ -13,28 +13,28 @@ import android.content.Context;
 import android.graphics.Color;
 
 public class FilledLineGraph {
-		private float[] _vector;
-		private String _title;
-	
+	private float[] _vector;
+	private String _title;
+
 	public FilledLineGraph(float[] vector,String title){
 		_vector=vector;
 		_title=title;
 	}
-	
+
 	public GraphicalView getView(Context context){
 		float[] y=_vector;
-				
+
 		TimeSeries series = new TimeSeries("");
 		for (int i=0;i<y.length;i++)
 		{
 			series.add(i+1,y[i]);
 		}
-		
+
 		//creates data set from series
 		XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
 		dataset.addSeries(series);
 		//dataset.addSeries(series2)
-		
+
 		//gives line its properties, one renderer for one series
 		XYSeriesRenderer renderer = new XYSeriesRenderer();
 		renderer.setFillPoints(true);
@@ -42,8 +42,8 @@ public class FilledLineGraph {
 		renderer.setLineWidth(5);
 		renderer.setColor(Color.rgb(51, 153, 102));
 		renderer.setFillBelowLine(true);
-		renderer.setFillBelowLineColor(Color.rgb(51, 204, 153));
-		
+		renderer.setFillBelowLineColor(Color.rgb(00, 66, 99));
+
 		//for grouping series into multiple renderer
 		XYMultipleSeriesRenderer mrenderer = new XYMultipleSeriesRenderer();
 		mrenderer.addSeriesRenderer(renderer);
@@ -52,13 +52,13 @@ public class FilledLineGraph {
 		mrenderer.setChartTitle(_title);
 		mrenderer.setGridColor(Color.DKGRAY);
 		mrenderer.setShowGrid(true);
-		mrenderer.setZoomButtonsVisible(true);
+		mrenderer.setZoomButtonsVisible(false);
 		mrenderer.setZoomEnabled(true);
 		mrenderer.setYTitle("Kwota");
 		mrenderer.setXTitle("Miesi¹ce");
-		mrenderer.setYAxisMin(1.25*StatisticDataGenerator.GetMin(_vector));
-		mrenderer.setYAxisMax(1.25*StatisticDataGenerator.GetMax(_vector));
-		
+		mrenderer.setYAxisMin(StatisticDataGenerator.GetMin(_vector)-100);
+		mrenderer.setYAxisMax(StatisticDataGenerator.GetMax(_vector)+100);
+
 		return ChartFactory.getLineChartView(context, dataset, mrenderer);
 	}
 

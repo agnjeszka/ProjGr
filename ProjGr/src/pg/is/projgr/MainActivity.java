@@ -97,7 +97,6 @@ public class MainActivity extends Activity {
 		klik2.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				Intent startNewActivityOpen = new Intent(MainActivity.this,
 						Raporty.class);
 				startActivityForResult(startNewActivityOpen, 0);
@@ -107,7 +106,6 @@ public class MainActivity extends Activity {
 		klik.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				Intent startNewActivityOpen = new Intent(MainActivity.this,
 						Klikniecia.class);
 				startActivityForResult(startNewActivityOpen, 0);
@@ -118,11 +116,10 @@ public class MainActivity extends Activity {
 		klik3.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				Intent startNewActivityOpen = new Intent(MainActivity.this,
 						Statystyki.class);
 				startActivityForResult(startNewActivityOpen, 0);
-				// startActivity(new Intent("pg.is.projgr.KLIKNIECIA"));
+				//startActivity(new Intent("pg.is.projgr.KLIKNIECIA"));
 			}
 		});
 	}
