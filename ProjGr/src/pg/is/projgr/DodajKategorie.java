@@ -1,5 +1,9 @@
 package pg.is.projgr;
 
+import java.sql.SQLException;
+
+import pg.is.projgr.actions.Kategoria;
+import pg.is.projgr.actions.Podkategoria;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +30,14 @@ public class DodajKategorie extends Activity{
 				
 				EditText txtProduct3 = (EditText) findViewById(R.id.editTextDodPodkat);
 				String product = txtProduct3.getText().toString();
+				Kategoria k = MainActivity.dataGenerator.getKategoriaByName(Klikniecia.kategoria);
+				Podkategoria p = new Podkategoria(product, k);
+				try {
+					MainActivity.dataGenerator.insertPodkategoria(p);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 	              // Launching new Activity on selecting single List Item
 	              Intent i = new Intent(getApplicationContext(), Klikniecia.class);
 	              // sending data to new activity
