@@ -2,6 +2,8 @@ package pg.is.projgr;
 
 import java.sql.SQLException;
 import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -144,16 +146,23 @@ public class Klikniecia extends Activity {
 
 		zatwierdzBtn.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				
+				SimpleDateFormat pdf = new SimpleDateFormat("MMM dd, yyyy hh:mm:ss aa");
+				Date dateLocal = new Date(2013, 01, 20);
+				try {
+					dateLocal = pdf.parse(lblDateAndTime.getText().toString());
+				} catch (ParseException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				Calendar cal = Calendar.getInstance();
-				cal.setTime(date);
+				cal.setTime(dateLocal);
 				int month = cal.get(Calendar.MONTH);
 				Log.d("date",""+ month);
 				List<Raport> raporty = MainActivity.dataGenerator.getRaportByMonth(month);
 				if (raporty.size() == 0) {
 					float number = Float.valueOf(txtProduct3.getText()
 							.toString());
-					Raport raport = new Raport(date.getMonth(), date.getYear(),
+					Raport raport = new Raport(dateLocal.getMonth(), dateLocal.getYear(),
 							1000.0f, 1000.0f - number, 0.0f + number);
 					try {
 						MainActivity.dataGenerator.insertRaport(raport);
