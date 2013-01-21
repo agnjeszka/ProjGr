@@ -30,7 +30,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper implements Parcelabl
 	private static final String DATABASE_NAME = "budzet2.db";
 	// any time you make changes to your database objects, you may have to
 	// increase the database version
-	private static final int DATABASE_VERSION = 9;
+	private static final int DATABASE_VERSION = 10;
 
 	// wydatek
 	private Dao<Wydatek, Integer> wydatekDao = null;

@@ -78,16 +78,16 @@ public class MainActivity extends Activity {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
-//
-//		try {
-//
-//			List<Wydatek> wydatki = MainActivity.dataGenerator.selectWydatki();
-//			Wydatek w = wydatki.get(wydatki.size() - 1);
-//			Log.d("Main Activity nazwa", w.getNazwa());
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+
+		try {
+
+			List<Wydatek> wydatki = MainActivity.dataGenerator.selectWydatki();
+			Wydatek w = wydatki.get(wydatki.size() - 1);
+			Log.d("Main Activity nazwa", w.getNazwa());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		setContentView(R.layout.activity_main);
 
 		Button klik = (Button) findViewById(R.id.button1);

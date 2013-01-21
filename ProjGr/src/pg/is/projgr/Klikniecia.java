@@ -163,7 +163,7 @@ public class Klikniecia extends Activity {
 					float number = Float.valueOf(txtProduct3.getText()
 							.toString());
 					Raport raport = new Raport(dateLocal.getMonth(), dateLocal.getYear(),
-							1000.0f, 1000.0f - number, 0.0f + number);
+							2000.0f, 1000.0f - number, 0.0f + number);
 					try {
 						MainActivity.dataGenerator.insertRaport(raport);
 					} catch (SQLException e) {
@@ -178,6 +178,14 @@ public class Klikniecia extends Activity {
 					MainActivity.dataGenerator.updateRaportMonth(raport);
 				}
 
+				Kategoria kat = MainActivity.dataGenerator.getKategoriaByName(kategoria);
+				Podkategoria pod = MainActivity.dataGenerator.getPodkategoriaByName(txtPodkategoria.getText().toString());
+				try {
+					MainActivity.dataGenerator.insertProdukt(new Produkt(txtProduct2.getText().toString(),pod));
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				alertDialogDodano = new AlertDialog.Builder(Klikniecia.this)
 						.create();
 				alertDialogDodano.setTitle("Dodano");
